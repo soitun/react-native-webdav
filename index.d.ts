@@ -1,6 +1,6 @@
 declare module 'react-native-webdav' {
 
-  export default class StaticServer {
+  export default class RNWebdav {
     list: any
     createDirectory: any
     download: any
