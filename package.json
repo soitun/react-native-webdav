@@ -15,7 +15,10 @@
   "keywords": [
     "react-native"
   ],
-  "author": "troyeguo <guo362429@gmail.com>",
+  "author": {
+    "name": "troyeguo",
+    "email": "guo362429@gmail.com"
+  },
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "peerDependencies": {
