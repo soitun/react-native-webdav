@@ -26,14 +26,59 @@ import RNWebdav from "react-native-webdav";
 //URL points to the folder
 RNWebdav.list(USERNAME, PASSWORD, URL)
   .then((res) => {
-    console.log(res); //folders and files in a array sequelized to string
+    console.log(res); //folders and files in a array sequelized to string, eg: [/dav/, /dav/KoodoReader1/, /dav/KoodoReader/, /dav/KoodoReader2/]
   })
   .catch((err) => {
     console.log(err);
   });
 ```
 
-### Create folders
+### Check if file or folder exsits
+
+```javascript
+import RNWebdav from "react-native-webdav";
+
+//URL points to the folder or file
+RNWebdav.exsits(USERNAME, PASSWORD, URL)
+  .then((res) => {
+    console.log(res); //true if success
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+### Move file
+
+```javascript
+import RNWebdav from "react-native-webdav";
+
+//URL points to the file
+RNWebdav.move(USERNAME, PASSWORD, SOURCE_URL, DESTINATION_URL) //Url needs to contain the file name and extension
+  .then((res) => {
+    console.log(res); //true if success
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+### Copy file
+
+```javascript
+import RNWebdav from "react-native-webdav";
+
+//URL points to the file
+RNWebdav.copy(USERNAME, PASSWORD, SOURCE_URL, DESTINATION_URL, IS_OVERWRITE) //Url needs to contain the file name and extension
+  .then((res) => {
+    console.log(res); //true if success
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+### Create folder
 
 ```javascript
 import RNWebdav from "react-native-webdav";
@@ -48,7 +93,7 @@ RNWebdav.createDirectory(USERNAME, PASSWORD, URL)
   });
 ```
 
-### Download files
+### Download file
 
 ```javascript
 import RNWebdav from "react-native-webdav";
@@ -63,7 +108,7 @@ RNWebdav.download(USERNAME, PASSWORD, URL, PATH_TO_YOUR_FILE) //Url and path nee
   });
 ```
 
-### Upload files
+### Upload file
 
 ```javascript
 import RNWebdav from "react-native-webdav";

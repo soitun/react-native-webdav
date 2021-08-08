@@ -76,6 +76,61 @@ public class RNWebdavModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void delete(String username, String password, String url, Promise promise) {
+        Sardine sardine = new OkHttpSardine();
+        sardine.setCredentials(username, password);
+        try {
+            sardine.delete(url);
+            promise.resolve(sardine.exists(url));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            promise.reject(e);
+        }
+    }
+
+    @ReactMethod
+    public void exsits(String username, String password, String url, Promise promise) {
+        Sardine sardine = new OkHttpSardine();
+        sardine.setCredentials(username, password);
+        try {
+            promise.resolve(sardine.exists(url));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            promise.reject(e);
+        }
+    }
+
+    @ReactMethod
+    public void move(String username, String password, String sourceUrl, String destUrl, Promise promise) {
+        Sardine sardine = new OkHttpSardine();
+        sardine.setCredentials(username, password);
+        try {
+            sardine.move(sourceUrl, destUrl);
+            promise.resolve(sardine.exists(destUrl));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            promise.reject(e);
+        }
+    }
+
+    @ReactMethod
+    public void copy(String username, String password, String sourceUrl, String destUrl, Boolean isOverwrite, Promise promise) {
+        Sardine sardine = new OkHttpSardine();
+        sardine.setCredentials(username, password);
+        try {
+            sardine.copy(sourceUrl, destUrl, isOverwrite);
+            promise.resolve(sardine.exists(destUrl));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            promise.reject(e);
+        }
+    }
+
+    @ReactMethod
     public void download(String username, String password, String url, String dest,Promise promise) {
         InputStream input = null;
         OutputStream output = null;
