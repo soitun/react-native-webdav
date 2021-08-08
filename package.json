@@ -4,6 +4,7 @@
   "version": "1.0.10",
   "description": "A sardine-android wrapper for react native to access files with webdav",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
