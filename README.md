@@ -54,7 +54,7 @@ RNWebdav.exsits(USERNAME, PASSWORD, URL)
 import RNWebdav from "react-native-webdav";
 
 //URL points to the file
-RNWebdav.move(USERNAME, PASSWORD, SOURCE_URL, DESTINATION_URL) //Url needs to contain the file name and extension
+RNWebdav.move(USERNAME, PASSWORD, SOURCE_URL, DESTINATION_URL, IS_OVERWRITE) //Url needs to contain the file name and extension
   .then((res) => {
     console.log(res); //true if success
   })
