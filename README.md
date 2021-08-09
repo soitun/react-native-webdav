@@ -6,7 +6,7 @@ A sardine-android wrapper for react native to access files with webdav.
 
 - This package is only for Android apps. Since I don't know a thing about Swift or Object-C, this package has no plan to support ios from my side. Feel free to pull request.
 
-- This package has only been tested for RN 0.64.0
+- This package has only been tested for RN >=0.64.0
 
 - This package doesn't accept feature requests for now.
 
@@ -98,8 +98,7 @@ RNWebdav.createDirectory(USERNAME, PASSWORD, URL)
 ```javascript
 import RNWebdav from "react-native-webdav";
 
-//URL points to the file
-RNWebdav.download(USERNAME, PASSWORD, URL, PATH_TO_YOUR_FILE) //Url and path needs to contain the file name and extension
+RNWebdav.download(USERNAME, PASSWORD, URL_TO_FILE, DEST_PATH_FOR_FILE) //Url and path needs to contain the file name and extension
   .then((res) => {
     console.log(res); //true if success
   })
@@ -113,8 +112,7 @@ RNWebdav.download(USERNAME, PASSWORD, URL, PATH_TO_YOUR_FILE) //Url and path nee
 ```javascript
 import RNWebdav from "react-native-webdav";
 
-//URL points to the file
-RNWebdav.upload(USERNAME, PASSWORD, URL, PATH_YOU_UPLOAD_TO) //Url and path needs to contain the file name and extension
+RNWebdav.upload(USERNAME, PASSWORD, DEST_URL_FOR_FILE, SOURCE_PATH_TO_FILE) //Url and path needs to contain the file name and extension
   .then((res) => {
     console.log(res); //true if success
   })

@@ -103,11 +103,11 @@ public class RNWebdavModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void move(String username, String password, String sourceUrl, String destUrl, Promise promise) {
+    public void move(String username, String password, String sourceUrl, String destUrl, Boolean isOverwrite, Promise promise) {
         Sardine sardine = new OkHttpSardine();
         sardine.setCredentials(username, password);
         try {
-            sardine.move(sourceUrl, destUrl);
+            sardine.move(sourceUrl, destUrl, isOverwrite);
             promise.resolve(sardine.exists(destUrl));
 
         } catch (IOException e) {
