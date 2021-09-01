@@ -4,11 +4,9 @@ A sardine-android wrapper for react native to access files with webdav.
 
 ## IMPORTANT
 
-- This package is only for Android apps. Since I don't know a thing about Swift or Object-C, this package has no plan to support ios from my side. Feel free to pull request.
+- This package is only for Android apps. No plan to support ios from my side. Feel free to pull request.
 
 - This package has only been tested for RN >=0.64.0
-
-- This package doesn't accept feature requests for now.
 
 ## Usage (Android)
 
@@ -41,7 +39,7 @@ import RNWebdav from "react-native-webdav";
 //URL points to the folder or file
 RNWebdav.exsits(USERNAME, PASSWORD, URL)
   .then((res) => {
-    console.log(res); //true if success
+    console.log(res); //true if exists
   })
   .catch((err) => {
     console.log(err);
