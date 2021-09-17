@@ -135,7 +135,7 @@ public class RNWebdavModule extends ReactContextBaseJavaModule {
         InputStream input = null;
         OutputStream output = null;
         Sardine sardine = new OkHttpSardine();
-        sardine.setCredentials("2237026218@qq.com", "a8g8ca6su5n2u86v");
+        sardine.setCredentials(username, password);
         try {
             final InputStream in = sardine.get(url);
             input = new BufferedInputStream(in, 8 * 1024);
@@ -162,7 +162,7 @@ public class RNWebdavModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void upload(String username, String password, String url, String source,String contentType, Promise promise) {
         Sardine sardine = new OkHttpSardine();
-        sardine.setCredentials("2237026218@qq.com", "a8g8ca6su5n2u86v");
+        sardine.setCredentials(username, password);
         try {
             File file = new File(source);
             sardine.put(url, file, contentType, false);
