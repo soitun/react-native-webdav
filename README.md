@@ -4,7 +4,7 @@ A sardine-android wrapper for react native to access files with webdav.
 
 ## IMPORTANT
 
-- This package is only for Android apps. No plan to support ios from my side. Feel free to pull request.
+- This package is only for Android apps and doesn't work with Expo. No plan to support ios from my side. Feel free to pull request.
 
 - This package has only been tested for RN >=0.64.0
 
