@@ -26,7 +26,7 @@ export default class App extends Component {
     });
 
     // RNWebdav.list(
-    //   '2237026218@qq.com',
+    //   'test@qq.com',
     //   '********************',
     //   'https://dav.jianguoyun.com/dav/KoodoReader/',
     // )
@@ -37,7 +37,7 @@ export default class App extends Component {
     //     console.log(err);
     //   });
     RNWebdav.list(
-      '2237026218@qq.com',
+      'test@qq.com',
       '********************',
       'https://dav.jianguoyun.com/dav/',
     )
@@ -48,7 +48,7 @@ export default class App extends Component {
         console.log(err);
       });
     // RNWebdav.createDirectory(
-    //   '2237026218@qq.com',
+    //   'test@qq.com',
     //   '********************',
     //   'https://dav.jianguoyun.com/dav/KoodoReader1/',
     // )
@@ -60,7 +60,7 @@ export default class App extends Component {
     //   });
 
     // RNWebdav.download(
-    //   '2237026218@qq.com',
+    //   'test@qq.com',
     //   '********************',
     //   'https://dav.jianguoyun.com/dav/KoodoReader/2021-02-12.zip',
     //   RNFS.DocumentDirectoryPath + 'data.zip',
@@ -73,7 +73,7 @@ export default class App extends Component {
     //   });
 
     // RNWebdav.upload(
-    //   '2237026218@qq.com',
+    //   'test@qq.com',
     //   '********************',
     //   'https://dav.jianguoyun.com/dav/KoodoReader/data1.zip',
     //   RNFS.DocumentDirectoryPath + 'data.zip',
